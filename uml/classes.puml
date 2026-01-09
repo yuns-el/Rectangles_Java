@@ -1,0 +1,8 @@
+@startuml
+class Rectangle {
+- amplada: double
++ llargada: double
++ area(): double
++ escalar(valor: numero)
+}
+@enduml

@@ -11,6 +11,13 @@ package org.yourcompany.yourproject;
 public class Rectangles {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+        Rectangle r1 = new Rectangle();
+        r1.amplada = 100;
+        r1.llargada = 200;
+
+        Rectangle r2 = new Rectangle();
+        r2.amplada = 30;
+        r2.llargada = 60;
     }
 }
