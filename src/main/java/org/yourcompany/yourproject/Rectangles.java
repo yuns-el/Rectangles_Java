@@ -8,47 +8,60 @@ package org.yourcompany.yourproject;
  *
  * @author Younes
  */
-import java.util.Random;
-import java.util.Scanner;
 public class Rectangles {
 
     public static void main(String[] args) {
-        Scanner lector = new Scanner(System.in);
-        Random rand = new Random();
 
-        Rectangle r1 = new Rectangle(100, 200);
+        /**en comptes de posar         
+        *r1.setAmplada(10);
+        r1.setLlargada(20); 
+        fem Rectangle r1 = new Rectangle (amplada, llargada);*/ 
+        /*
+        Rectangle r1 = new Rectangle(5, 3);
+        Rectangle r2 = new Rectangle(30,60);
+        Rectangle r3 = new Rectangle(-30,-60);
+        //Prova tot vuit
+        Rectangle r5 = new Rectangle ();
+        //Provem el nou mètode
+        Rectangle r4 = new Rectangle(3, 3, "vermell");
 
-        Rectangle r2 = new Rectangle(30, 60);
+        //print de le àrees
+        System.out.println("Area r1 = " +r1.area());
+        System.out.println("Area r2 = " +r2.area());
+        System.out.println("Area r3 = " +r3.area());
+        System.out.println("////////////////////////////");
+        System.out.println("Perímetre r1 = " +r1.perimetre());
+        System.out.println("Perímetre r2 = " +r2.perimetre());
+        //ERROR!!!
+        System.out.println("Diagonal r1 = " + r1.diagonal());
+        System.out.println(r1.toString()); //Nomès té amplada i llargada
+        System.out.println(r4.toString()); //Té tots els atributs
+        System.out.println(r5.toString()); //No te ningún atribut (Surten nomès els predeterminats)
+        r4.mostrarRectangle();
+        */
 
-        Rectangle r3 = new Rectangle(-30, -60);
+       Rectangle r1 = new Rectangle(10.5, 4, "vermell");
+       System.out.println(r1.toString());
+       System.out.println("Perimetre: " + r1.perimetre());
+       r1.mostrarRectangle();
 
-        Rectangle r4 = new Rectangle(20, 40, "blau");
+       try{
+        Rectangle r2 = new Rectangle(-1, -4);
+        r2.mostrarRectangle();
+       }
+        catch(IllegalArgumentException e){
+        System.out.println(e.getMessage());
+       }
 
-        Rectangle r5 = new Rectangle();
+       Rectangle r3 = new Rectangle(10.5, 4, "vermell");
+       System.out.println(r3.toString());
 
-        System.out.println("L'area del r1 es: " + r1.area());
-        System.out.println("L'area del r2 es: " + r2.area());
-        System.out.println("L'area del r3 es: " + r3.area());
-
-        System.out.println("El perimetre del r1 es: " + r1.perimetre());
-        System.out.println("El perimetre del r2 es: " + r2.perimetre());
-        System.out.println("El perimetre del r3 es: " + r3.perimetre());
+       if(r1.equals(r3)){
+        System.out.println("r1 i r3 son iguals.");
+       }
+       else{
+        System.out.println("r1 i r3 son diferents.");
+       }
         
-        System.out.println("L'amplada del rectangle 1: " + r1.getAmplada());
-        System.out.println("L'amplada del rectangle 2: " + r2.getAmplada());
-        System.out.println("L'amplada del rectangle 3: " + r3.getAmplada());
-
-        System.out.println("L'altura del rectangle 1: " + r1.getLlargada());
-        System.out.println("L'altura del rectangle 2: " + r2.getLlargada());
-        System.out.println("L'altura del rectangle 3: " + r3.getLlargada());
-
-        System.out.println("La diagonal del rectangle 1 es: " + r1.diagonal());
-        System.out.println("La diagonal del rectangle 2 es: " + r2.diagonal());
-        System.out.println("La diagonal del rectangle 3 es: " + r3.diagonal());
-
-        System.out.println("El color del rectangle 1 es: " + r1.getColor());
-        System.out.println("El color del rectangle 4 es: " + r4.getColor());
-
-        System.out.println(r5.toString());
     }
 }
